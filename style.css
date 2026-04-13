@@ -1,84 +1,113 @@
 :root {
-    --sysma-green: #1d3d32;
-    --sysma-beige: #f4f1ea;
-    --sysma-gold: #c19b64;
-    --text-dark: #2c2c2c;
+    --sysma-sand: #f4f1ea;   /* Pääväri: Tausta ja valoisuus */
+    --sysma-charcoal: #1a2a44; /* Teksti ja painikkeet */
+    --sysma-accent: #c19b64;   /* Tehoste: Kultainen korostus */
     --white: #ffffff;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--sysma-beige);
-    color: var(--text-dark);
+    background-color: var(--sysma-sand);
+    color: var(--sysma-charcoal);
     margin: 0;
 }
 
 header {
-    background-color: var(--sysma-green);
+    background-color: var(--sysma-charcoal); /* Tumma yläosa tuo ryhtiä */
     color: var(--white);
     text-align: center;
-    padding: 50px 20px;
+    padding: 60px 20px;
+    border-bottom: 5px solid var(--sysma-accent);
 }
 
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
-    color: var(--sysma-green);
+    color: var(--sysma-charcoal);
 }
 
-header h1 { color: var(--white); margin: 0; }
+header h1 { color: var(--white); margin: 0; letter-spacing: 1px; }
 
-/* Kuljettajakortit */
+/* Kuljettajakortit - Valoisa ja moderni ilme */
 .driver-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
     margin-top: 30px;
 }
 
 .driver-card {
     background: var(--white);
-    padding: 20px;
-    border-radius: 12px;
+    padding: 30px;
+    border-radius: 15px;
     text-align: center;
-    border-top: 5px solid var(--sysma-gold);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    /* Ohut kultainen reunus antaa "pilkettä silmäkulmaan" */
+    border: 1px solid rgba(193, 155, 100, 0.3);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.driver-card:hover {
+    transform: translateY(-5px);
 }
 
 .driver-card h4 {
-    margin: 10px 0;
-    font-size: 1.2rem;
+    margin: 15px 0 5px;
+    font-size: 1.4rem;
+}
+
+.driver-card p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.driver-photo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover; /* Varmistaa, että kuva täyttää alan rajaamatta rumasti */
+    border-radius: 50%; /* Tee kuvasta pyöreä */
+    border: 5px solid var(--white); /* Valkoinen reunus korostaa kuvaa taustasta */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Hieno varjo */
+    margin-top: -60px; /* Nosta kuvaa ylöspäin niin, että se on osittain kortin ulkopuolella */
+}
+
+/* Muokataan hieman driver-card -tyyliä, jotta kuva mahtuu */
+.driver-card {
+    background: var(--white);
+    padding: 20px 30px 30px 30px; /* Lisää paddingia ylös, jotta kuva ei peitä tekstiä */
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(193, 155, 100, 0.3);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    margin-top: 60px; /* Lisää marginia ylös, jotta kuva ei mene edellisen osion päälle */
+    transition: transform 0.3s ease;
 }
 
 .driver-call-btn {
     display: inline-block;
-    background-color: var(--sysma-green);
+    background-color: var(--sysma-charcoal);
     color: var(--white);
-    padding: 12px 20px;
+    padding: 14px 25px;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: 600;
-    margin-top: 10px;
     width: 100%;
     box-sizing: border-box;
+    transition: background-color 0.2s;
 }
 
-/* Mobiili "Pääsoittonappi" */
+.driver-call-btn:hover {
+    background-color: var(--sysma-accent);
+}
+
+/* Mobiili "Pääsoittonappi" - Nyt tyylikkään kultainen */
 .mobile-call-fab {
     display: none;
     position: fixed;
-    bottom: 20px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--sysma-gold);
+    background-color: var(--sysma-accent);
     color: var(--white);
-    padding: 15px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    z-index: 1000;
-}
-
-@media (max-width: 600px) {
-    .mobile-call-fab { display: block; }
+    padding: 18
 }
