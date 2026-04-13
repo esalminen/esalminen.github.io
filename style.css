@@ -1,0 +1,106 @@
+:root {
+    --primary: #1a2a44; /* Tummansininen */
+    --accent: #b8860b;  /* Kupari/Kulta */
+    --light: #f8f9fa;
+    --text: #333;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--text);
+    background-color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+h1 { margin: 0; font-size: 2.5rem; }
+.tagline { margin: 10px 0 0; opacity: 0.8; font-style: italic; }
+
+#hero {
+    background-color: var(--light);
+    text-align: center;
+    padding: 60px 0;
+    border-bottom: 2px solid #eee;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent);
+    color: white;
+    padding: 18px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    background-color: #9e730a;
+}
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+td:last-child {
+    text-align: right;
+    font-weight: bold;
+}
+
+.mobile-call-fab {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745; /* Vihreä soittonappi */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+@media (max-width: 600px) {
+    .mobile-call-fab {
+        display: block; /* Näytetään vain mobiilissa */
+    }
+    h1 { font-size: 2rem; }
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 0.9rem;
+    background: #eee;
+}
