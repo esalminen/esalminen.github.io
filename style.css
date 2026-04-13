@@ -111,3 +111,56 @@ header h1 { color: var(--white); margin: 0; letter-spacing: 1px; }
     color: var(--white);
     padding: 18
 }
+
+#ennakkotilaus {
+    background-color: var(--white);
+    padding: 60px 0;
+    border-top: 1px solid rgba(193, 155, 100, 0.2);
+}
+
+.order-form {
+    max-width: 500px;
+    margin: 30px auto 0;
+    text-align: left;
+    background: var(--sysma-sand);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box; /* Tärkeä! Estää leveyden karkaamisen */
+    font-family: inherit;
+}
+
+.submit-button {
+    background-color: var(--sysma-charcoal);
+    color: var(--white);
+    border: none;
+    padding: 15px 25px;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 1rem;
+}
+
+.submit-button:hover {
+    background-color: var(--sysma-accent);
+}
