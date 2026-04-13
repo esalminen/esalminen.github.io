@@ -1,7 +1,7 @@
 :root {
-    --sysma-sand: #f4f1ea;   /* Pääväri: Tausta ja valoisuus */
-    --sysma-charcoal: #1a2a44; /* Teksti ja painikkeet */
-    --sysma-accent: #c19b64;   /* Tehoste: Kultainen korostus */
+    --sysma-sand: #f4f1ea;  
+    --sysma-charcoal: #1a2a44; 
+    --sysma-accent: #c19b64;
     --white: #ffffff;
 }
 
@@ -9,11 +9,11 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: var(--sysma-sand);
     color: var(--sysma-charcoal);
-    margin: 0;
+    margin: 10;
 }
 
 header {
-    background-color: var(--sysma-charcoal); /* Tumma yläosa tuo ryhtiä */
+    background-color: var(--sysma-charcoal);
     color: var(--white);
     text-align: center;
     padding: 60px 20px;
@@ -27,7 +27,25 @@ h1, h2, h3 {
 
 header h1 { color: var(--white); margin: 0; letter-spacing: 1px; }
 
-/* Kuljettajakortit - Valoisa ja moderni ilme */
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent);
+    color: white;
+    background-color: var(--sysma-charcoal);
+    padding: 18px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
 .driver-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -40,7 +58,6 @@ header h1 { color: var(--white); margin: 0; letter-spacing: 1px; }
     padding: 30px;
     border-radius: 15px;
     text-align: center;
-    /* Ohut kultainen reunus antaa "pilkettä silmäkulmaan" */
     border: 1px solid rgba(193, 155, 100, 0.3);
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
@@ -64,22 +81,21 @@ header h1 { color: var(--white); margin: 0; letter-spacing: 1px; }
 .driver-photo {
     width: 120px;
     height: 120px;
-    object-fit: cover; /* Varmistaa, että kuva täyttää alan rajaamatta rumasti */
-    border-radius: 50%; /* Tee kuvasta pyöreä */
-    border: 5px solid var(--white); /* Valkoinen reunus korostaa kuvaa taustasta */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Hieno varjo */
-    margin-top: -60px; /* Nosta kuvaa ylöspäin niin, että se on osittain kortin ulkopuolella */
+    object-fit: cover; 
+    border-radius: 50%; 
+    border: 5px solid var(--white); 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    margin-top: -60px; 
 }
 
-/* Muokataan hieman driver-card -tyyliä, jotta kuva mahtuu */
 .driver-card {
     background: var(--white);
-    padding: 20px 30px 30px 30px; /* Lisää paddingia ylös, jotta kuva ei peitä tekstiä */
+    padding: 20px 30px 30px 30px; 
     border-radius: 15px;
     text-align: center;
     border: 1px solid rgba(193, 155, 100, 0.3);
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    margin-top: 60px; /* Lisää marginia ylös, jotta kuva ei mene edellisen osion päälle */
+    margin-top: 60px;
     transition: transform 0.3s ease;
 }
 
@@ -100,7 +116,6 @@ header h1 { color: var(--white); margin: 0; letter-spacing: 1px; }
     background-color: var(--sysma-accent);
 }
 
-/* Mobiili "Pääsoittonappi" - Nyt tyylikkään kultainen */
 .mobile-call-fab {
     display: none;
     position: fixed;
