@@ -16,11 +16,12 @@
     const dateInput = document.getElementById('datetime');
     const now = new Date();
     now.setHours(now.getHours() + 24);
-    
+
     // Muotoillaan ISO-formaattiin, jonka datetime-local ymmärtää (YYYY-MM-DDTHH:mm)
     const minDateTime = now.toISOString().slice(0, 16);
     dateInput.min = minDateTime;
 </script>
+
 <body>
 
     <header>
@@ -79,75 +80,43 @@
         </div>
     </section>
 
+    </section>
     <section id="ennakkotilaus">
-    <div class="container">
-        <h3>Ennakkotilaus</h3>
-        <p>Tilaa kyyti vähintään 24 tuntia ennen noutoaikaa. Kiireellisissä tapauksissa soita suoraan kuljettajalle.</p>
-        
-        <form action="https://formspree.io/f/oma-id" method="POST" class="order-form">
-            <div class="form-group">
-                <label for="name">Nimi</label>
-                <input type="text" id="name" name="name" required placeholder="Matti Meikäläinen">
-            </div>
-            
-            <div class="form-group">
-                <label for="phone">Puhelinnumero</label>
-                <input type="tel" id="phone" name="phone" required placeholder="040 123 4567">
-            </div>
+        <div class="container">
+            <h3>Ennakkotilaus</h3>
+            <p>Tilaa kyyti vähintään 24 tuntia ennen noutoaikaa. Kiireellisissä tapauksissa soita suoraan kuljettajalle.
+            </p>
 
-            <div class="form-group">
-                <label for="pickup">Noutopaikka (Osoite tai paikka)</label>
-                <input type="text" id="pickup" name="pickup" required placeholder="Esim. Sysmän tori">
-            </div>
+            <form action="https://formspree.io/f/oma-id" method="POST" class="order-form">
+                <div class="form-group">
+                    <label for="name">Nimi</label>
+                    <input type="text" id="name" name="name" required placeholder="Matti Meikäläinen">
+                </div>
 
-            <div class="form-group">
-                <label for="date">Noutopäivä ja -aika (aikaisintaan 24h päästä)</label>
-                <input type="datetime-local" id="datetime" name="datetime" required>
-            </div>
+                <div class="form-group">
+                    <label for="phone">Puhelinnumero</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="040 123 4567">
+                </div>
 
-            <div class="form-group">
-                <label for="message">Lisätiedot (esim. matkustajamäärä tai matkatavarat)</label>
-                <textarea id="message" name="message" rows="4"></textarea>
-            </div>
+                <div class="form-group">
+                    <label for="pickup">Noutopaikka (Osoite tai paikka)</label>
+                    <input type="text" id="pickup" name="pickup" required placeholder="Esim. Sysmän tori">
+                </div>
 
-            <button type="submit" class="submit-button">LÄHETÄ TILAUSPYYNTÖ</button>
-        </form>
-    </div>
-</section><section id="ennakkotilaus">
-    <div class="container">
-        <h3>Ennakkotilaus</h3>
-        <p>Tilaa kyyti vähintään 24 tuntia ennen noutoaikaa. Kiireellisissä tapauksissa soita suoraan kuljettajalle.</p>
-        
-        <form action="https://formspree.io/f/oma-id" method="POST" class="order-form">
-            <div class="form-group">
-                <label for="name">Nimi</label>
-                <input type="text" id="name" name="name" required placeholder="Matti Meikäläinen">
-            </div>
-            
-            <div class="form-group">
-                <label for="phone">Puhelinnumero</label>
-                <input type="tel" id="phone" name="phone" required placeholder="040 123 4567">
-            </div>
+                <div class="form-group">
+                    <label for="date">Noutopäivä ja -aika (aikaisintaan 24h päästä)</label>
+                    <input type="datetime-local" id="datetime" name="datetime" required>
+                </div>
 
-            <div class="form-group">
-                <label for="pickup">Noutopaikka (Osoite tai paikka)</label>
-                <input type="text" id="pickup" name="pickup" required placeholder="Esim. Sysmän tori">
-            </div>
+                <div class="form-group">
+                    <label for="message">Lisätiedot (esim. matkustajamäärä tai matkatavarat)</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
 
-            <div class="form-group">
-                <label for="date">Noutopäivä ja -aika (aikaisintaan 24h päästä)</label>
-                <input type="datetime-local" id="datetime" name="datetime" required>
-            </div>
-
-            <div class="form-group">
-                <label for="message">Lisätiedot (esim. matkustajamäärä tai matkatavarat)</label>
-                <textarea id="message" name="message" rows="4"></textarea>
-            </div>
-
-            <button type="submit" class="submit-button">LÄHETÄ TILAUSPYYNTÖ</button>
-        </form>
-    </div>
-</section>
+                <button type="submit" class="submit-button">LÄHETÄ TILAUSPYYNTÖ</button>
+            </form>
+        </div>
+    </section>
 
     <section id="hinnasto">
         <div class="container">
